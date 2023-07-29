@@ -1,20 +1,18 @@
-package com.khush.gpt
+package com.khush.chatgpt3
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.graphics.Bitmap
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.webkit.CookieManager
 import android.webkit.CookieSyncManager
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
-import com.khush.gpt.tools.NetworkManager
+import com.khush.chatgpt3.tools.NetworkManager
 
 
 @SuppressLint("CustomSplashScreen")

@@ -1,4 +1,4 @@
-package com.khush.gpt.tools;
+package com.khush.chatgpt3.tools;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

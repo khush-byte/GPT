@@ -1,4 +1,4 @@
-package com.khush.gpt
+package com.khush.chatgpt3
 
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
@@ -25,9 +25,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.switchmaterial.SwitchMaterial
-import com.khush.gpt.tools.CustomAdapter
-import com.khush.gpt.tools.MyData
-import com.khush.gpt.tools.NetworkManager
+import com.khush.chatgpt3.tools.CustomAdapter
+import com.khush.chatgpt3.tools.MyData
+import com.khush.chatgpt3.tools.NetworkManager
 import org.json.JSONObject
 import pl.droidsonroids.gif.GifImageView
 import java.util.Locale

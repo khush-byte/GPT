@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.khush.gpt'
+    namespace 'com.khush.chatgpt3'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.khush.gpt"
+        applicationId "com.khush.chatgpt3"
         minSdk 21
         targetSdk 33
         versionCode 6

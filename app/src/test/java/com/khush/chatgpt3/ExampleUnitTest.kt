@@ -1,4 +1,4 @@
-package com.khush.gpt
+package com.khush.chatgpt3
 
 import org.junit.Test
 
