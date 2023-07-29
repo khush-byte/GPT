@@ -25,6 +25,15 @@ class CustomAdapter(context: Context, var list: ArrayList<MyData>) :
         fun bind(position: Int) {
             val recyclerViewModel = list[position]
             text.text = recyclerViewModel.text
+            text.setOnLongClickListener {
+                copyText(yourContext, text.text.toString())
+                Toast.makeText(
+                    yourContext,
+                    "Text copied to clipboard",
+                    Toast.LENGTH_SHORT
+                ).show()
+                true
+            }
         }
     }
 
@@ -64,9 +73,9 @@ class CustomAdapter(context: Context, var list: ArrayList<MyData>) :
         return list[position].type
     }
 
-//    private fun copyText(context: Context, text: String) {
-//        val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-//        val clip = ClipData.newPlainText("Copied Text", text)
-//        clipboard.setPrimaryClip(clip)
-//    }
+    private fun copyText(context: Context, text: String) {
+        val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clip = ClipData.newPlainText("Copied Text", text)
+        clipboard.setPrimaryClip(clip)
+    }
 }

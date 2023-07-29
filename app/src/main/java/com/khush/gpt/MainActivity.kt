@@ -12,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.webkit.ConsoleMessage
+import android.webkit.CookieManager
 import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
 import android.webkit.WebView
@@ -154,6 +155,7 @@ class MainActivity : AppCompatActivity() {
     private fun initWebViewSettings() {
         webView = findViewById(R.id.myWeb)
         webView.settings.javaScriptEnabled = true
+        CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true)
         val myJavaScriptInterface = MyJavascriptInterface(this@MainActivity)
         webView.addJavascriptInterface(myJavaScriptInterface, "MyFunction")
         webView.webChromeClient = object : WebChromeClient() {
@@ -166,7 +168,7 @@ class MainActivity : AppCompatActivity() {
     fun setAnswer(msg: String) {
         // Log.d("MyTag", msg)
         data.add(MyData(1, msg))
-        chatField.smoothScrollToPosition((chatField.adapter?.itemCount ?: 0) - 1)
+        chatField.smoothScrollToPosition((chatField.adapter?.itemCount ?: 0)-1)
         adapter.notifyDataSetChanged()
 
         if (speechMode) {
